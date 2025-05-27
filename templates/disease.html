@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='images/a.jpg') }}');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333; /* Adjusted text color for better visibility */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f0f0f0; /* Light grey background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        #result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #disease_name {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #disease_description {
+            text-align: center;
+        }
+        #uploadForm {
+            text-align: center; /* Center align form elements */
+            margin-bottom: 20px; /* Add spacing below form */
+        }
+        #uploadForm input[type="file"],
+        #uploadForm button {
+            padding: 10px 20px; /* Add padding to buttons */
+            font-size: 16px; /* Increase font size for better readability */
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50; /* Green button color */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #uploadForm input[type="file"]:hover,
+        #uploadForm button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        #uploaded_image {
+            display: block;
+            margin: 20px auto;
+            max-width: 70%; /* Adjusted maximum width */
+            border-radius: 10px;
+        }
+        #myChart {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Plant Disease Detection</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="image" id="image" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        <div id="result"></div>
+
+        <h2 id="disease_name"></h2>
+        <p id="disease_description"></p>
+        <img id="uploaded_image" style="display:none;">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

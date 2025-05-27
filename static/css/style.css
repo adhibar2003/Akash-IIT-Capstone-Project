@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form input, form select, form button {
+  margin: 10px;
+}
+#result {
+  margin-top: 20px;
+}

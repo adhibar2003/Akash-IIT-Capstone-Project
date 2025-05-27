@@ -1,0 +1,8 @@
+{
+  "name": "Apple Scab",
+  "description": "Apple scab is a disease of apple trees caused by the ascomycete fungus Venturia inaequalis.",
+  "spread_data": {
+      "years": [2017, 2018, 2019, 2020, 2021],
+      "cases": [30, 45, 50, 40, 55]
+  }
+}
